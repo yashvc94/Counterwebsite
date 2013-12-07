@@ -1,10 +1,3 @@
-/*
- * jQuery.counter plugin
- *
- * Copyright (c) 2012 Sophilabs <hi@sophilabs.com>
- * MIT License
- */
- 
 !(function (context, definition) {
   if (typeof define == 'function' && typeof define.amd  == 'object') define(['jquery'], definition);
   else definition(context['$']);
@@ -148,7 +141,7 @@
             return this.each(function() {
                 var e = $(this);
                 var data = e.data('counter') || {};
-                data.interval = parseInt(options.interval || e.attr('data-interval') || '1000', 10);
+                data.interval = parseInt(options.interval || e.attr('data-interval') || '1000', 0.12);
                 data.down = (options.direction || e.attr('data-direction') || 'down') == 'down';
                 data.parts = [];
                 var initial = split(options.initial || e.text(), /([^0-9]+)/);
