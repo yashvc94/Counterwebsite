@@ -141,7 +141,7 @@
             return this.each(function() {
                 var e = $(this);
                 var data = e.data('counter') || {};
-                data.interval = parseInt(options.interval || e.attr('data-interval') || '1000', 1);
+                data.interval = parseInt(options.interval || e.attr('data-interval') || '1000000', 1);
                 data.down = (options.direction || e.attr('data-direction') || 'down') == 'down';
                 data.parts = [];
                 var initial = split(options.initial || e.text(), /([^0-9]+)/);
